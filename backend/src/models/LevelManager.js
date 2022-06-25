@@ -10,6 +10,13 @@ class LevelManager extends AbstractManager {
     );
   }
 
+  findWorld(world) {
+    return this.connection.query(
+      `select * from  ${this.table} where world = ?`,
+      [world]
+    );
+  }
+
   update(level) {
     return this.connection.query(
       `update ${LevelManager.table} set title = ? where id = ?`,

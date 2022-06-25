@@ -60,3 +60,32 @@ button {
 a {
   text-decoration: none;
 }
+
+.imgLevel {
+  width: 280px;
+  height: 280px;
+  border: solid 5px #ccc;
+  border-radius: 25px;
+}
+
+.listLevel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  list-style-type: none;
+  justify-content: space-evenly;
+  gap: 50px 30px;
+  margin-right: 2%;
+  margin-left: 2%;
+  margin-bottom: 36px;
+}
+
+.listImg {
+  display: flex;
+  justify-content: center;
+}
+
+.titleSelect {
+  text-align: center;
+  margin-bottom: 36px;
+  margin-top: 36px;
+}

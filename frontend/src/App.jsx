@@ -1,13 +1,18 @@
-// eslint-disable-next-line import/no-unresolved
+/* eslint-disable import/no-unresolved */
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "@pages/Home";
+import Welcome from "@pages/Welcome";
 
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/level" element={<Home />} />
+        <Route path="/" element={<Welcome />} />
+      </Routes>
+    </Router>
   );
 }
 

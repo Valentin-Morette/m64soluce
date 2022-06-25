@@ -33,7 +33,7 @@ export default function Home() {
               <button
                 type="button"
                 className="buttonStar"
-                onClick={() => setVideo(allVideo[vid.level - 1])}
+                onClick={() => setVideo(allVideo[vid.id - 1])}
               >
                 <img className="star" src={star} alt={vid.name} />
               </button>
