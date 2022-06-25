@@ -1,56 +1,62 @@
-body {
+@font-face {
+  font-family: "mario";
+  src: url(./assets/mario.ttf);
+}
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  color: #ccc;
+  font-family: mario;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.video_iframe {
+  border-radius: 50px;
+  border: 5px solid #ccc;
 }
 
-.App {
+.video {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: #7c2323;
+}
+
+.star {
+  width: 150px;
+}
+
+.starList {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 42px;
+  margin-bottom: 42px;
+}
+
+h2 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 button {
-  font-size: calc(10px + 2vmin);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.titleLevel {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.author {
+  text-align: center;
+  margin-top: 24px;
+}
+
+a {
+  text-decoration: none;
 }
