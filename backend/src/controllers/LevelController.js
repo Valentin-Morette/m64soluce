@@ -45,6 +45,22 @@ class LevelController {
       });
   };
 
+  static readworldlevel = (req, res) => {
+    models.level
+      .findWorldLevel(req.params.world, req.params.level)
+      .then(([rows]) => {
+        if (rows[0] == null) {
+          res.sendStatus(404);
+        } else {
+          res.send(rows[0]);
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  };
+
   static edit = (req, res) => {
     const level = req.body;
 

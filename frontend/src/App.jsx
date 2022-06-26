@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/level" element={<Home />} />
+        <Route path="/level/:world" element={<Home />} />
         <Route path="/" element={<Welcome />} />
       </Routes>
     </Router>

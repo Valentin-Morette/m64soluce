@@ -18,21 +18,21 @@ import { Link } from "react-router-dom";
 
 export default function Welcome() {
   const images = [
-    level1,
-    level2,
-    level3,
-    level4,
-    level5,
-    level6,
-    level7,
-    level8,
-    level9,
-    level10,
-    level11,
-    level12,
-    level13,
-    level14,
-    level15,
+    { img: level1, world: 1 },
+    { img: level2, world: 2 },
+    { img: level3, world: 3 },
+    { img: level4, world: 4 },
+    { img: level5, world: 5 },
+    { img: level6, world: 6 },
+    { img: level7, world: 7 },
+    { img: level8, world: 8 },
+    { img: level9, world: 9 },
+    { img: level10, world: 10 },
+    { img: level11, world: 11 },
+    { img: level12, world: 12 },
+    { img: level13, world: 13 },
+    { img: level14, world: 14 },
+    { img: level15, world: 15 },
   ];
 
   return (
@@ -41,8 +41,12 @@ export default function Welcome() {
       <ul className="listLevel">
         {images.map((image) => (
           <li className="listImg">
-            <Link to="/level">
-              <img className="imgLevel" src={image} alt="level" />
+            <Link to={`/level/${image.world}`}>
+              <img
+                className="imgLevel"
+                src={image.img}
+                alt={`level${image.world}`}
+              />
             </Link>
           </li>
         ))}
