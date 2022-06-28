@@ -5,8 +5,6 @@ export default function Video({ video }) {
       {video && (
         <iframe
           className="video_iframe"
-          width="890"
-          height="500"
           src={video.link}
           title={`[Super Mario 64] Star ${video.world} - ${video.level} : ${video.name}`}
           frameBorder="0"

@@ -17,36 +17,33 @@ import level15 from "@assets/tableaumario/level15.png";
 import { Link } from "react-router-dom";
 
 export default function Welcome() {
-  const images = [
-    { img: level1, world: 1 },
-    { img: level2, world: 2 },
-    { img: level3, world: 3 },
-    { img: level4, world: 4 },
-    { img: level5, world: 5 },
-    { img: level6, world: 6 },
-    { img: level7, world: 7 },
-    { img: level8, world: 8 },
-    { img: level9, world: 9 },
-    { img: level10, world: 10 },
-    { img: level11, world: 11 },
-    { img: level12, world: 12 },
-    { img: level13, world: 13 },
-    { img: level14, world: 14 },
-    { img: level15, world: 15 },
+  const mondes = [
+    { img: level1, world: 1, name: "Bataille de Bob-Omb" },
+    { img: level2, world: 2, name: "Forteresse de Whomp" },
+    { img: level3, world: 3, name: "Baie des pirates" },
+    { img: level4, world: 4, name: "Montagne Gla-Gla" },
+    { img: level5, world: 5, name: "Manoir de Big Boo" },
+    { img: level6, world: 6, name: "Caverne brumeuse" },
+    { img: level7, world: 7, name: "Laves fatales" },
+    { img: level8, world: 8, name: "Sables trop mouvants" },
+    { img: level9, world: 9, name: "Affreux bassin" },
+    { img: level10, world: 10, name: "Chez le roi des neiges" },
+    { img: level11, world: 11, name: "Monde trempe-seche" },
+    { img: level12, world: 12, name: "Trop haute montagne" },
+    { img: level13, world: 13, name: "Ile grands-petits" },
+    { img: level14, world: 14, name: "Horloge Tic-Tac" },
+    { img: level15, world: 15, name: "Course arc-en-ciel" },
   ];
 
   return (
     <>
       <h1 className="titleSelect">Selection des niveaux</h1>
       <ul className="listLevel">
-        {images.map((image) => (
+        {mondes.map((monde) => (
           <li className="listImg">
-            <Link to={`/level/${image.world}`}>
-              <img
-                className="imgLevel"
-                src={image.img}
-                alt={`level${image.world}`}
-              />
+            <Link to={`/level/${monde.world}`}>
+              <img className="imgLevel" src={monde.img} alt={monde.name} />
+              <p className="listName">{monde.name}</p>
             </Link>
           </li>
         ))}
