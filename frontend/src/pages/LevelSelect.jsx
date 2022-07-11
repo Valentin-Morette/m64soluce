@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleLeft } from "@fortawesome/free-regular-svg-icons";
-import star from "../assets/star.png";
+import star from "../assets/images/star.png";
 import Video from "../components/Video";
 
 export default function Home() {
@@ -12,13 +12,21 @@ export default function Home() {
   const [video, setVideo] = useState();
   const getAllVideo = () => {
     axios
-      .get(`http://localhost:5000/levels/${world}`)
+      .get(
+        `${
+          import.meta.env.VITE_BACKEND_URL ?? "http://localhost:5000"
+        }/levels/${world}`
+      )
       .then((res) => res.data)
       .then((data) => setAllVideo(data));
   };
   const getVideo = () => {
     axios
-      .get(`http://localhost:5000/levels/${world}/1`)
+      .get(
+        `${
+          import.meta.env.VITE_BACKEND_URL ?? "http://localhost:5000"
+        }/levels/${world}/1`
+      )
       .then((res) => res.data)
       .then((data) => setVideo(data));
   };

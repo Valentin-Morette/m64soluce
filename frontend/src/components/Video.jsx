@@ -1,4 +1,5 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
+
 export default function Video({ video }) {
   return (
     <div className="video">
@@ -17,3 +18,12 @@ export default function Video({ video }) {
     </div>
   );
 }
+
+Video.propTypes = {
+  video: PropTypes.shape({
+    link: PropTypes.string.isRequired,
+    world: PropTypes.number.isRequired,
+    level: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+  }).isRequired,
+};
