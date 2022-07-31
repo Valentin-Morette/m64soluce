@@ -15,21 +15,21 @@ import level14 from "../assets/images/tableaumario/level14.png";
 import level15 from "../assets/images/tableaumario/level15.png";
 
 const dataWorld = [
-  { img: level1, world: 1 },
-  { img: level2, world: 2 },
-  { img: level3, world: 3 },
-  { img: level4, world: 4 },
-  { img: level5, world: 5 },
-  { img: level6, world: 6 },
-  { img: level7, world: 7 },
-  { img: level8, world: 8 },
-  { img: level9, world: 9 },
-  { img: level10, world: 10 },
-  { img: level11, world: 11 },
-  { img: level12, world: 12 },
-  { img: level13, world: 13 },
-  { img: level14, world: 14 },
-  { img: level15, world: 15 },
+  { img: level1, world: 1, name: "Bataille Bob-omb" },
+  { img: level2, world: 2, name: "Forteresse de Whomp" },
+  { img: level3, world: 3, name: "Baie des Pirates" },
+  { img: level4, world: 4, name: "Montagne Gla-Gla" },
+  { img: level5, world: 5, name: "Manoir de Big Boo" },
+  { img: level6, world: 6, name: "Caverne Brumeuse" },
+  { img: level7, world: 7, name: "Laves Fatales" },
+  { img: level8, world: 8, name: "Sables Trop Mouvants" },
+  { img: level9, world: 9, name: "Affreux Bassin" },
+  { img: level10, world: 10, name: "Chez le Roi des Neiges" },
+  { img: level11, world: 11, name: "Monde Trempe-Seche" },
+  { img: level12, world: 12, name: "Trop Haute Montagne" },
+  { img: level13, world: 13, name: "Ile Grands-Petits" },
+  { img: level14, world: 14, name: "Horloge Tic-Tac" },
+  { img: level15, world: 15, name: "Course Arc-en-Ciel" },
 ];
 
 export default dataWorld;

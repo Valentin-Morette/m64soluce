@@ -14,6 +14,7 @@ export default function Welcome() {
                 src={image.img}
                 alt={`level${image.world}`}
               />
+              <p className="titleWorld">{image.name}</p>
             </Link>
           </li>
         ))}
